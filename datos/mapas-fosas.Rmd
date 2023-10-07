@@ -1,0 +1,167 @@
+---
+title: "Mapas sobre la localización de las fosas"
+author: "Cristina Alonso Pascual"
+date: "2023-10-06"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Visualización para el TFM *Las víctimas de la memoria*
+
+El objetivo de este documento RMarkdown es visualizar un mapa de España en el que aparezca la ubicación de las fosas en los distintos municipios del país, y que sobre cada uno de ellos se vea un círculo cuyo tamaño dependa del número de fosas que allí se registren.
+
+Para ello vamos a descargar los datos proporcionados por el [Ministerio de la Presidencia, Relaciones con las Cortes y Memoria Democrática](https://www.mpr.gob.es/memoriademocratica/mapa-de-fosas/Paginas/buscadormapafosas.aspx). Además, vamos a utilizar el archivo shapefile de España [en la página del Centro Nacional de Información Geográfica](https://centrodedescargas.cnig.es/CentroDescargas/catalogo.do?Serie=CAANE) y el de los lugares en la [página de descargas referida durante el máster](https://mapcruzin.com/free-spain-arcgis-maps-shapefiles.htm).
+
+Ahora, instalamso las bibliotecas que usaremos para la visualización.
+
+```{r}
+
+if(!require(mapsf)) {install.packages("mapsf"); require(mapsf)}
+if(!require(SpatialPosition)) {install.packages("SpatialPosition"); require(SpatialPosition)}
+if(!require(cartography)) {install.packages("cartography"); require(cartography)}
+if(!require(janitor)) {install.packages("janitor"); require(cartography)}
+
+library(spData)
+library(sf)
+library(SpatialPosition)
+library(mapsf)
+library(cartography)
+library(dplyr)
+library(data.table)
+library(janitor) # para los duplicados
+
+``` 
+
+Una vez las tenemos listas, guardamos los documentos en tres dataframes distintos: uno con el nombre del país ``esp``, otro con el de ``places``, que contendrá las localizaciones que necesitamos y otro con el de ``fosas``, que tiene los datos que visualizaremos.
+
+```{r}
+
+esp <- st_read("data/lineas_limite/SHP_ETRS89/ll_autonomicas_inspire_peninbal_etrs89/ll_autonomicas_inspire_peninbal_etrs89.shp", quiet=TRUE)
+places <- st_read("data/spain-places/places.shp", quiet=TRUE)
+fosas <- st_read("./mapa-fosas-ministerio.csv", header = TRUE)
+
+```
+
+Vamos a previsualizar el dataframe ``places``.
+
+```{r}
+
+places # previsualizamos los datos que tenemos 
+
+```
+
+Y el dataframe ``fosas``.
+
+```{r}
+
+fosas
+
+```
+
+Creamos un filtro del shapefile ```places``` que luego nos servirá para el mapa.
+
+```{r}
+
+head.cities <- places %>%
+  filter(population > 500000)
+
+```
+
+Primero, para que mergear no nos dé problemas, vamos a contar cuántas fosas hay por municipios (por si acaso hay repetidos, añadimos también el filtro de comunidades autónomas).
+
+```{r}
+
+fosas <- fosas %>%
+  group_by(Comunidad.autónoma, Localidad) %>%
+  mutate(num_fosas = n())
+
+```
+
+Tenemos que dejar ahora un único valor por comunidad autónoma y municipio.
+
+```{r}
+
+fosas <- fosas[!duplicated(fosas[c("Comunidad.autónoma", "Localidad")]),]
+
+```
+
+Como solo nos interesan dos columnas (Localidad y num_fosas) son las que vamos a mantener.
+
+```{r}
+
+fosas <- subset(fosas, select = c("Localidad", "num_fosas"))
+
+```
+
+Volvemos a previsualizar ```fosas``` para ver el resultado.
+
+```{r}
+
+fosas
+
+```
+
+Ahora, vamos a mergear los dos dataframes para que ambos tengan la columna de la localización
+
+```{r}
+
+mapaFosas <- merge(places, fosas, by.x="name", by.y="Localidad")
+
+```
+
+Visualizamos ```mapaFosas``` en orden descendente para ver un poco los resultados.
+
+```{r}
+
+mapaFosas[rev(order(mapaFosas$num_fosas)), ]
+
+mapaFosas
+
+```
+Como parece que sigue habiendo algún duplicado por la base de datos de ciudades, vamos a ver cuáles son y trataremos de limpiarlos a mano.
+
+```{r}
+
+get_dupes(mapaFosas, name) %>% print(n=14)
+
+```
+Teniendo la lista completa ahora podemos limpiarlos, lo que se ha realizado comprobando uno a uno de los datos cuál era el que tenía el Ministerio registrado en su mapa.
+
+```{r}
+
+mapaFosas <- mapaFosas[!(mapaFosas$osm_id %in% c("288258794", "282834900", "128529676", "88889292", "288259490", "288260379", "245487749", "357179023", "288258215", "288259119", "349239121", "276481942", "279235755", "296157940", "301264298", "362420068", "356503641", "349247450", "348087205", "288259725", "288259897", "253705784", "312752858", "318100257", "349247724", "310680175", "311820043", "356648197", "248236355", "252418616", "316780727", "392339244", "96880248", "282783964", "288259326", "354694582", "95108620", "365886835", "349248354", "401296908", "316221231", "349238769", "349235128", "288258772", "36735395")),]
+
+```
+
+Una vez eliminados los duplicados, podemos volver a previsualizar el dataframe...
+
+```{r}
+
+mapaFosas
+
+```
+
+... y concluir con la visualización, para lo que primero se establece la base, es decir, el mapa de España. Sobre ella añadimos ahora el valor de las ciudades que queremos ver.
+
+```{r, fig.width=14}
+
+plot(st_geometry(esp), col="black", lwd=0.01, axes=FALSE, bg="white")
+
+plot(st_geometry(mapaFosas), add = TRUE)
+
+propSymbolsLayer(x=mapaFosas, var="num_fosas",
+                 legend.title.txt="Número de fosas", legend.pos = "bottomleft", inches=0.75,
+                 col="#f3b91a", border="black")
+
+labelLayer(x=head.cities, txt="name", col="black",font,
+           halo=TRUE, bg="white", r=0.2, cex = 1.9,
+           overlap=FALSE, show.lines=TRUE)
+
+barscale(pos="bottomright", style="pretty", unit="km")
+
+```
+
+Vamos a exportar el mapa
