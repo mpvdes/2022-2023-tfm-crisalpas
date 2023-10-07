@@ -128,8 +128,8 @@ Para la web se han utilizado los lenguajes HTML, CSS y Javascript, con objeto de
 
 En particular, la web se divide en un [archivo .html principal](index.html) y dos carpetas una [para imágenes](./img/) utilizadas tanto en la web como en esta memoria y otra dividida, a su vez en dos:
 
-- ./assets/css, en la que se encuentra [el CSS](./assets/css/style.css), en el que también se incluyen animaciones como la de la máquina de escribir y la del parpadeo de la flecha en portada que lleva a los usuarios al contenido del reportaje.
-- ./assets/js, que incluye los archivos .js con las interacciones necesarias para la [barra de navegación lateral](./assets/js/sidebar.js) y para la tabla con los nombres de los [desaparecidos](./assets/js/sidebar.js).
+- ./assets/css, en la que se encuentra [el CSS](./assets/css/style.css), en el que también se incluyen animaciones como la de la máquina de escribir (basado en el código de [esta página web](https://css-tricks.com/snippets/css/typewriter-effect/)) y la del parpadeo de la flecha en portada que lleva a los usuarios al contenido del reportaje.
+- ./assets/js, que incluye los archivos .js con las interacciones necesarias para la [barra de navegación lateral](./assets/js/sidebar.js), con ayuda de la web [BBBootstrap](https://bbbootstrap.com/snippets/bootstrap-5-sidebar-menu-toggle-button-34132202#) y para la tabla con los nombres de los [desaparecidos](./assets/js/sidebar.js), realizada con ayuda de los tutoriales de [W3Schools](https://www.w3schools.com/w3css/).
 
 #### 3.5.2. Diseño de la web
 
