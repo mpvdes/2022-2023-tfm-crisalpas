@@ -1,10 +1,21 @@
-# Memoria del Trabajo Fin del Máster en Periodismo y Visualización de Datos (MPVD)
-# Reportaje de datos *Las víctimas de la memoria*
+# Memoria del Trabajo Fin del Máster en Periodismo y Visualización de Datos (MPVD) *Las víctimas de la memoria*
 Alumna: Cristina Alonso Pascual<br>
 DNI: 45690520P<br>
 Tutores: María Zuil y Adolfo Antón Bravo<br> 
 Curso: 2022-2023<br>
 Universidad de Alcalá (UAH)<br>
+
+---
+
+**Agradecimientos**:
+
+Este trabajo no hubiera sido posible sin las enseñanzas del profesorado del Máster en Periodismo y Visualización de Datos (MPVD), con especial mención a Adolfo Antón Bravo, siempre preocupado por nuestro trabajo y a disposición de nuestras consultas, y a María Zuil, que se ha encargado de revisar mi trabajo y a la que admiro desde hace tiempo por tratarse de una gran profesional, siempre dispuesta también a echar una mano.
+
+En lo personal, quiero agradecer a mi familia por estar ahí. En especial, a mi madre y a mi padre, por apoyarme durante el proceso de realización del TFM y a lo largo de todo el máster, y estar ahí para animarme cuando era necesario. También me gustaría agradecer a mis amigos, quienes, en los momentos de crisis -grandes o pequeñas-, me acompañaron y me hicieron salir adelante y confiar.
+
+Y, por supuesto, agradecer a las personas que han participado en este TFM por dedicarme su tiempo, lo más valioso que se puede ofrecer a alguien, y que han hecho que ahora pueda contar un pedacito de su historia, nuestra historia.
+
+---
 
 **Resumen**:
 
@@ -12,13 +23,15 @@ Los descendientes de las víctimas de la guerra civil española y la dictadura f
 
 **Palabras clave**: memoria histórica, memoria democrática, guerra civil, franquismo, recopilación de datos
 
----
-
 **Abstract**:
 
 Some descendants of Spanish Civil War and Franco's regime victims talk about the obstacles found when they started to look for information about their relatives. Despite the fact that 87 years have passed since the start of the Civil War and that the Government has created a law of democratic memory in 2022, it is still difficult to access documents from that period. The descendants and experts on historical memory try to explain how they have dealt with these obstacles during their research. Furthermore, they give their opinion on the consequences that the lack of information about that period has on nowadays' society.
 
 **Keywords**: historical memory, democratic heritage, Spanish Civil War, Francoist dictatorship, data compilation
+
+**Enlace a la página web del reportaje**: [Las víctimas de la memoria](https://mpvdes.github.io/2022-2023-tfm-crisalpas/)
+
+**Enlace al repositorio de GitHub**: [2022-2023-tfm-crisalpas](https://github.com/mpvdes/2022-2023-tfm-crisalpas)
 
 ## 1. Introducción
 
@@ -104,23 +117,31 @@ En las imágenes anteriores, se precisa cuál es la idea inicial de la web, que 
 
 Es decir, aunque el enfoque del cuerpo principal del Trabajo Fin de Máster es la ausencia de datos y será lo que se desarrolle a lo largo de este, las fichas complementarán el reportaje con anécdotas concretas para quienes quieran más detalles.
 
-No obstante, la estructura de la misma ha ido variando con el tiempo y se ha ido adaptando a lo que se iba redactando y descubriendo.
+No obstante, la estructura de la misma ha ido variando con el tiempo y se ha ido adaptando a lo que se iba redactando y descubriendo, hasta convertirse en el resultado final.
 
 
 #### 3.5.1. Herramientas utilizadas en la web
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Para la web se han utilizado los lenguajes HTML, CSS y Javascript, con objeto de lograr la estructura de la página, con un estilo concreto y con unas acciones específicas, respectivamente.
+
+En particular, la web se divide en un [archivo .html principal](index.html) y dos carpetas una [para imágenes](./img/) utilizadas tanto en la web como en esta memoria y otra dividida, a su vez en dos:
+
+- ./assets/css, en la que se encuentra [el CSS](./assets/css/style.css), en el que también se incluyen animaciones como la de la máquina de escribir y la del parpadeo de la flecha en portada que lleva a los usuarios al contenido del reportaje.
+- ./assets/js, que incluye los archivos .js con las interacciones necesarias para la [barra de navegación lateral](./assets/js/sidebar.js) y para la tabla con los nombres de los [desaparecidos](./assets/js/sidebar.js).
 
 #### 3.5.2. Diseño de la web
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+El estilo visual de la web utiliza colores sencillos, también para mejorar la accesibilidad (blanco y negro principalmente), a los que añade un tono naranja (cuyo código hexadecimal es #f3b91a), color rojizo como el que algunos estudios (como el de Kuhbandner, Spitzer, Lichtenfeld y Pekrun [publicado en Frontiers](https://www.frontiersin.org/articles/10.3389/fpsyg.2015.00231/full)) asocian a la memoria, tema del artículo.
 
+En cuanto a la tipografía, se escogen opciones *sans serif* o sin serifa, también con objeto de facilitar la lectura y la comprensión. Por un lado, Saira Condensed se usa para la cabecera, los títulos y otros espacios destacados del reportaje, así como para la barra de navegación, mientras que Poppins se utiliza para el cuerpo del texto. Ambas son de [Google Fonts](https://fonts.google.com/).
 
 ## 4. Resultado y conclusión
 
-[AÑADIR CONCLUSIONES DEL TFM Y SUS LIMITACIONES O COSAS QUE FALTAN POR TRATAR O ESTARÍA BIEN COMPLETAR CON FUTUROS REPORTAJES O ARTÍCULOS]
+El resultado de este Trabajo Fin de Máster apunta a la necesidad de seguir investigando la memoria histórica y democrática de España. Todavía sigue siendo complicado acceder a datos de la historia reciente, algo que difiere de otros países, que han puesto a disposición del público general los documentos disponibles e, incluso, han realizado juicios para reparar a las víctimas.
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Aunque a lo largo del tiempo se ha ido publicando cada vez más contenido sobre la guerra civil española y la dictadura franquista, aún queda mucho camino por recorrer. Incluso los documentos que se encuentran disponibles no son de fácil accesibilidad, ya sea por su contenido, la forma de estructurarlo o porque ni siquiera aparecen indexados en Google.
+
+Algo interesante que no ha llegado a cubrir en profundidad este reportaje y que podría servir para otro artículo es el nivel de educación de la población sobre memoria histórica. Aunque existen algunos estudios al respecto, como se ha citado, no es un enfoque que se haya analizado en detalle, como ocurre también con la perspectiva femenina de la memoria, que, de acuerdo con Moreno, es clave para preservar muchas de las historias que llegan a la actualidad.
 
 ## 5. Bibliografía y referencias
 
@@ -134,4 +155,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 -"La oscura realidad de los archivos militares en España: falta personal para gestionar tanta memoria", *Público*. Enlace: https://www.publico.es/politica/oscura-realidad-archivos-militares-espana-falta-personal-gestionar-memoria.html. Consultado el 23 de septiembre de 2023.
 - Innovation and Human Rights (IHR), Concha Catalán. Enlace: https://ihr.world/es/. Consultado el 23 de septiembre de 2023.
 - buscar.combatientes.es, Hernán Fernández. Enlace: https://buscar.combatientes.es/. Consultado el 23 de septiembre de 2023.
+- "Enseñar un pasado controvertido desde un presente polarizado", *Revista de estudios sociales*, Rosendo Martínez Rodríguez, María Sánchez Agustí y Carlos Muñoz Labraña. Enlace: https://dialnet.unirioja.es/servlet/articulo?codigo=8530929. Consultado el 7 de octubre de 2023.
+- "La memoria histórica en la escuela", *Hispania*, Enrique Javier Díez Gutiérrez. Enlace: https://hispania.revistas.csic.es/index.php/hispania/article/view/1039. Consultado el 7 de octubre de 2023.
+- "Differential binding of colors to objects in memory: red and yellow stick better than blue and green", *Frontiers*, Christof Kuhbandner, Bernhard Spitzer, Stephanie Lichtenfeld y Reinhard Pekrun. Enlace: https://www.frontiersin.org/articles/10.3389/fpsyg.2015.00231/full. Consultado el 7 de octubre de 2023.
 
