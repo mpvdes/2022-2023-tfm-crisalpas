@@ -22,5 +22,3 @@ En este repositorio se puede encontrar el material usado para su realización.
     - [Documento RMarkdown para realizar el mapa de fosas](./data/mapas-fosas.Rmd)
     - [Archivo .csv con los datos utilizados para el mapa de fosas](./data/mapa-fosas-ministerio.csv)
     - [Carpeta con los shapefiles usados para visualizar el mapa](./data/data/)
-
-![Logo de MPVD en UAH](https://mpvd.es/images/logo.svg "MPVD en UAH")

@@ -110,8 +110,10 @@ Tras tener claro qué se quiere contar en el reportaje y cómo se va a estructur
 
 Primero, se bosqueja la forma de organización prevista para la web, basada en las entrevistas y antes de finalizar la redacción del reportaje.
 
-<img src="./img/webtfm1.jpg"  width="46%" height="35%">
-<img src="./img/webtfm2.jpg"  width="45.5%" height="25%">
+<p align="center">
+<img src="./img/webtfm1.jpg"  width="40%" height="35%">
+<img src="./img/webtfm2.jpg"  width="40%" height="25%">
+</p>
 
 En las imágenes anteriores, se precisa cuál es la idea inicial de la web, que se basa en título y subtítulo seguido del cuerpo principal del texto, con un mapa de las fosas y, posteriormente, visualizaciones de las fichas de las dos víctimas acerca de las que se han realizado las entrevistas, para ejemplificar el enfoque del texto.
 
