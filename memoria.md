@@ -1,10 +1,13 @@
 # Metodología del Trabajo Fin del Máster en Periodismo y Visualización de Datos (MPVD)
 Alumna: Cristina Alonso Pascual<br>
-Curso: 2022-2023
+DNI: 45690520P<br>
+Tutores: María Zuil y Adolfo Antón Bravo<br> 
+Curso: 2022-2023<br>
+Universidad de Alcalá (UAH)<br>
 
 **Resumen**:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Los descendientes de las víctimas de la guerra civil española y la dictadura franquista exponen los obstáculos a la hora de encontrar a sus familiares, pese a que han pasado 87 años desde el inicio de la Guerra Civil. Pese a la ley de memoria democrática de 2022, aún es complicado acceder a numerosos documentos de esa época. Afectados y expertos en memoria intentan explicar cómo hacen frente a estas dificultades en su investigación y dan su opinión sobre las consecuencias que tiene la falta de información de ese período sobre la sociedad actual.
 
 **Palabras clave**: memoria histórica, memoria democrática, guerra civil, franquismo, recopilación de datos
 
@@ -12,7 +15,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 **Abstract**:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Some descendants of Spanish Civil War and Franco's regime victims talk about the obstacles found when they started to look for information about their relatives. Despite the fact that 87 years have passed since the start of the Civil War and that the Government has created a law of democratic memory in 2022, it is still difficult to access documents from that period. The descendants and experts on historical memory try to explain how they have dealt with these obstacles during their research. Furthermore, they give their opinion on the consequences that the lack of information about that period has on nowadays' society.
 
 **Keywords**: historical memory, democratic heritage, Spanish Civil War, Francoist dictatorship, data compilation
 
@@ -56,7 +59,7 @@ Así, al comenzar el mes de septiembre, me pongo en contacto con las personas qu
 - Jorge Moreno, antropólogo y director del proyecto *Mapas de Memoria*.
 - Manuela Bergerot, diputada y secretaria de Organización de Más Madrid, experta en Memoria Democrática.
 
-Consigo hablar con todos, salvo con Bergerot y Ruiz. A su vez, Emilio Silva me pone en contacto con Hernán Fernández-Barriales, autor de la web [buscar.combatientes.es](https://buscar.combatientes.es/). 
+Consigo hablar con Silva y Moreno, pero no con Bergerot, Catalán y Ruiz. A su vez, Emilio Silva me pone en contacto con Hernán Fernández-Barriales, autor de la web [buscar.combatientes.es](https://buscar.combatientes.es/). 
 
 Además, después de la conversación con Jorge Moreno, contacto con otras tres personas que él me recomienda:
 
@@ -66,15 +69,11 @@ Además, después de la conversación con Jorge Moreno, contacto con otras tres 
 
 Con ellos decido concluir mi búsqueda de fuentes y cerrar el reportaje, si bien solo obtengo respuesta por parte de Fausto Canales, con quien quedo de forma presencial, y de Francisco Etxeberria, a quien remito una serie de preguntas por correo.
 
-El resto de entrevistas se realizan de forma telefónica, salvo la de Fernández, que se hace mediante videollamada. Todas ellas se graban y se minutan para luego facilitar la transcripción de las declaraciones, procedentes finalmente de un total de cinco fuentes.
-
-[OJO REVISAR CUÁNTAS HAN SIDO LAS FUENTES PERSONALES FINALMENTE]
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+El resto de entrevistas se realizan de forma telefónica, salvo la de Fernández, que se hace mediante videollamada. Todas ellas se graban y se minutan para luego facilitar la transcripción de las declaraciones, procedentes finalmente de un total de cuatro fuentes personales.
 
 ### 3.3. Fuentes documentales utilizadas
 
-[AÑADIR FUENTES DOCUMENTALES UTILIZADAS DURANTE EL PROCESO]
+Entre las fuentes 
 
 ### 3.4. Desarrollo del reportaje
 

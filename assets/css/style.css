@@ -220,6 +220,41 @@ section {
     }
 }
 
+.icono-redes-portada {
+    font-size: 150%;
+}
+
+.contenedor-texto-reportaje p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedor-texto-reportaje h2 {
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: bold;
+}
+
+.centrar-separador {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.pie {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: black;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.icono-redes-pie {
+    font-size: 130%;
+    color: #f3b91a;
+}
+
+
+/* Para la animación de la flecha de la portada */
+
 .icono-portada {
     margin-top: 20px;
     font-size: 200%;
@@ -240,58 +275,8 @@ section {
     }
 }
 
-.icono-redes-portada {
-    font-size: 150%;
-}
 
-.contenedor-texto-reportaje p {
-    font-family: 'Poppins', sans-serif;
-}
-
-.contenedor-texto-reportaje h2 {
-    font-family: 'Saira Condensed', sans-serif;
-    font-weight: bold;
-}
-
-.contenedor-texto-mapas {
-    background-image: url("./img/mapa.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.contenedor-texto-mapas p {
-    margin-left: 15%;
-    margin-right: 15%;
-    color: white;
-    background-color: black;
-    text-align: center;
-    padding: 5%;
-    font-size: 1.2vw;
-    font-family: 'Poppins', sans-serif;
-    @media screen and (max-width: 767px) {
-        font-size: 3.5vw;
-
-    }
-}
-
-.contenedor-texto-mapas img {
-    max-width: 100%;
-    height: auto;
-    @media screen and (max-width: 767px) {
-        max-width: 165%;
-        margin-left: 47%;
-        transform: translateX(-50%);
-    }
-}
-
-.centrar-separador {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-}
+/* Para el efecto de máquina de escribir */
 
 .maquina-escribir p {
     color: black;
@@ -309,7 +294,7 @@ section {
     /* Adjust as needed */
     animation:
         typing 3.5s steps(40, end),
-        blink-caret .5s step-end infinite;
+        blink-caret .8s step-end infinite;
 }
 
 @keyframes typing {
@@ -334,14 +319,37 @@ section {
     }
 }
 
-.pie {
-    padding-left: 30px;
-    padding-right: 30px;
-    color: black;
-    font-family: 'Saira Condensed', sans-serif;
+
+/* Para la parte del mapa */
+
+.contenedor-texto-mapas {
+    margin-top: 25px;
+    margin-bottom: 35px;
 }
 
-.icono-redes-pie {
-    font-size: 130%;
-    color: #f3b91a;
+.contenedor-texto-mapas p {
+    margin-left: 15%;
+    margin-right: 15%;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 5%;
+    font-size: 1.1vw;
+    font-family: 'Poppins', sans-serif;
+
+    @media screen and (max-width: 800px) {
+        font-size: 3.2vw;
+
+    }
+}
+
+.contenedor-texto-mapas img {
+    width: 100vw;
+    height: auto;
+
+    @media screen and (max-width: 767px) {
+        width: 165%;
+        margin-left: 47%;
+        transform: translateX(-50%);
+    }
 }
