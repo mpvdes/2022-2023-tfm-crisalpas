@@ -1,4 +1,5 @@
-# Metodología del Trabajo Fin del Máster en Periodismo y Visualización de Datos (MPVD)
+# Memoria del Trabajo Fin del Máster en Periodismo y Visualización de Datos (MPVD)
+# Reportaje de datos *Las víctimas de la memoria*
 Alumna: Cristina Alonso Pascual<br>
 DNI: 45690520P<br>
 Tutores: María Zuil y Adolfo Antón Bravo<br> 
@@ -37,7 +38,7 @@ Así, el Gobierno de España ha iniciado finalmente la conversación sobre la me
 
 Sin embargo, no existen numerosos artículos que analicen la dificultad de acceso a la información en memoria democrática -*Público* publicó el 31 de agosto de 2022 una pieza enfocada en ["La oscura realidad de los archivos militares en España"](https://www.publico.es/politica/oscura-realidad-archivos-militares-espana-falta-personal-gestionar-memoria.html)-, y es aún más complicado encontrar algún artículo o reportaje que desglose cuáles son los pasos a seguir para encontrar datos sobre personas asesinadas o represaliadas durante el franquismo y la guerra civil española, junto a las consecuencias que esto supone no solo para los familiares sino también para el conjunto de la sociedad.
 
-Con el fin de cubrir este espacio, surge este Trabajo Fin de Máster.
+Con el fin de cubrir este espacio y analizar 'los datos de la ausencia de datos', surge este Trabajo Fin de Máster.
 
 ## 3. Metodología
 
@@ -73,26 +74,37 @@ El resto de entrevistas se realizan de forma telefónica, salvo la de Fernández
 
 ### 3.3. Fuentes documentales utilizadas
 
-Entre las fuentes 
+En el reportaje no solo se han usado fuentes personales, sino también documentales y análisis de datos. Además de la legislación mencionada con anterioridad, consultada para partir de un contexto básico y a través del que poder realizar preguntas más pertinentes, se han buscado artículos académicos para reforzar los conocimientos previos y comprobar si se habían llevado a cabo estudios de ciertas temas que trata el reportaje -en particular, el de la educación-. En ese ámbito, dentro del reportaje se menciona a dos artículos académicos:
+
+- "Enseñar un pasado controvertido desde un presente polarizado", publicado por Rosendo Martínez Rodríguez, María Sánchez Agustí y Carlos Muñoz Labraña en la *Revista de estudios sociales* [en 2022](https://dialnet.unirioja.es/servlet/articulo?codigo=8530929). Habla de cómo los profesores enseñan la historia reciente de España en sus clases desde el punto de vista de los docentes.
+- "La memoria histórica en la escuela", publicado por Enrique Javier Díez Gutiérrez en *Hispania* también [en 2022](https://hispania.revistas.csic.es/index.php/hispania/article/view/1039). Investiga cuál es el conocimiento de los más jóvenes sobre memoria histórica.
+
+Asimismo, se han revisado los documentos proporcionados por Hernán Fernández-Barriales acerca de la búsqueda de su bisabuelo, de los que, en concreto, se han incluido dos páginas: una, del expediente de quintas y otra, de la relación de las penas capitales impuestas en el territorio de Badajoz, publicada en por la Auditoría de Guerra de la Primera Región Militar.
+
+En cuanto a los datos analizados, se ha examinado la base de datos del buscador [buscar.combatientes.es](https://buscar.combatientes.es/), que ha proporcionado Fernández-Barriales en un archivo .xls. Este se analiza y explica en un cuaderno de Python [disponible aquí](./data/analisis-datos-buscador.ipynb). El objeto era conocer cuántos nombres recoge el registro y cuáles son los más habituales.
+
+Por otro lado, se ha utilizado RStudio para realizar un mapa de las fosas que hay en España ([documento RMarkdown disponible aquí](./data/mapas-fosas.Rmd), en el que se puede consultar el proceso y la explicación y desarrollo del mismo). Para lograrlo, ha habido que usar RStudio también para limpiar los datos y poder cruzarlos con la base de datos que disponía de la geometría para dibujar posteriormente los puntos en el mapa.
 
 ### 3.4. Desarrollo del reportaje
 
 Una vez recopilada la distinta información -aunque alguna se va añadiendo durante el propio proceso de redacción-, se utilizan herramientas de transcripción de audio a texto (Pinpoint, de Google) para facilitar el trabajo de escucha y selección de declaraciones de las fuentes personales utilizadas.
 
-Así, comienza la redacción del reportaje, durante la que se lleva a cabo un proceso de estructura de la información que luego se mostrará en una web, desarrollada de forma simultánea a la escritura y finalizada posteriormente.
+Así, se lleva a cabo la redacción del reportaje, durante la que se lleva a cabo un proceso de estructura de la información que luego se mostrará en una web, desarrollada de forma simultánea a la escritura y al análisis de datos, y finalizada posteriormente.
 
 ### 3.5. Desarrollo de la web
 
-Una vez finalizado el reportaje incluyendo la estructura del mismo, se inicia el desarrollo de la web la penúltima semana de septiembre.
+Tras tener claro qué se quiere contar en el reportaje y cómo se va a estructurar, comienza el desarrollo de la web la penúltima semana de septiembre.
 
 Primero, se bosqueja la forma de organización prevista para la web, basada en las entrevistas y antes de finalizar la redacción del reportaje.
 
-<img src="webtfm1.jpg"  width="46%" height="35%">
-<img src="webtfm2.jpg"  width="45.5%" height="25%">
+<img src="./img/webtfm1.jpg"  width="46%" height="35%">
+<img src="./img/webtfm2.jpg"  width="45.5%" height="25%">
 
 En las imágenes anteriores, se precisa cuál es la idea inicial de la web, que se basa en título y subtítulo seguido del cuerpo principal del texto, con un mapa de las fosas y, posteriormente, visualizaciones de las fichas de las dos víctimas acerca de las que se han realizado las entrevistas, para ejemplificar el enfoque del texto.
 
 Es decir, aunque el enfoque del cuerpo principal del Trabajo Fin de Máster es la ausencia de datos y será lo que se desarrolle a lo largo de este, las fichas complementarán el reportaje con anécdotas concretas para quienes quieran más detalles.
+
+No obstante, la estructura de la misma ha ido variando con el tiempo y se ha ido adaptando a lo que se iba redactando y descubriendo.
 
 
 #### 3.5.1. Herramientas utilizadas en la web
@@ -104,7 +116,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
-## 4. Conclusión
+## 4. Resultado y conclusión
 
 [AÑADIR CONCLUSIONES DEL TFM Y SUS LIMITACIONES O COSAS QUE FALTAN POR TRATAR O ESTARÍA BIEN COMPLETAR CON FUTUROS REPORTAJES O ARTÍCULOS]
 
@@ -122,3 +134,4 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 -"La oscura realidad de los archivos militares en España: falta personal para gestionar tanta memoria", *Público*. Enlace: https://www.publico.es/politica/oscura-realidad-archivos-militares-espana-falta-personal-gestionar-memoria.html. Consultado el 23 de septiembre de 2023.
 - Innovation and Human Rights (IHR), Concha Catalán. Enlace: https://ihr.world/es/. Consultado el 23 de septiembre de 2023.
 - buscar.combatientes.es, Hernán Fernández. Enlace: https://buscar.combatientes.es/. Consultado el 23 de septiembre de 2023.
+
